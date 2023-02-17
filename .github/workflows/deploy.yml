@@ -7,7 +7,7 @@ name: Higher Vibe Healing Deploy
 
 jobs:
   deploy:
-    name: Serverless Deploy
+    name: Deploy to S3
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
