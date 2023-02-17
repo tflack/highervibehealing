@@ -20,7 +20,7 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.DEPLOY_AWS_SECRET_ACCESS_KEY }}
       run: |
         aws s3 rm s3://highervibehealing.com --recursive
-        aws s3 sync . s3://highervibehealing.com --exclude '.git/*' --exclude 'README.md' --acl public-read
+        aws s3 sync . s3://highervibehealing.com --exclude '.git/*' --exclude '.github/*' --exclude 'README.md' --acl public-read
     - name: Tag Build Back To GitHub
       id: tag-build
       env:
